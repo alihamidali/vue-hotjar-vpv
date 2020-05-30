@@ -5,9 +5,12 @@
 </template>
 
 <script>
-    export default {
-        name: "ThankyouPage"
-    }
+export default {
+  name: "ThankyouPage",
+  mounted() {
+    hj('vpv', 'finish');
+  }
+}
 </script>
 
 <style scoped>

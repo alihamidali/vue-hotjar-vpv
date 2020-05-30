@@ -13,6 +13,9 @@ export default {
     changeComponent() {
       this.$emit("changeComponent", "thank-you-component");
     }
+  },
+  mounted() {
+    hj('vpv', 'final_questions');
   }
 }
 </script>

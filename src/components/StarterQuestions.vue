@@ -12,6 +12,9 @@ export default {
     changeComponent() {
       this.$emit('changeComponent', 'basic-signup-component');
     }
+  },
+  mounted() {
+    hj('vpv', 'starter_questions');
   }
 }
 </script>

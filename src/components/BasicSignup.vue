@@ -12,6 +12,9 @@ export default {
     changeComponent(){
       this.$emit("changeComponent", "contact-info-component");
     }
+  },
+  mounted() {
+    hj('vpv', 'signup');
   }
 }
 </script>
