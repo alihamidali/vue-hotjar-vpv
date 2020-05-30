@@ -1,17 +1,39 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld/>
+    <component v-bind:is="currentComponent" v-bind="getCurrentComponent" @changeComponent="changeActiveComponent"></component>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+import StarterQuestions from './components/StarterQuestions'
+import BasicSignup from './components/BasicSignup'
+import ContactInfo from './components/ContactInfo'
+import FinalQuestions from './components/FinalQuestions'
+import ThankyouPage from './components/ThankyouPage'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    'starter-questions-component': StarterQuestions,
+    'basic-signup-component': BasicSignup,
+    'contact-info-component': ContactInfo,
+    'final-questions-component': FinalQuestions,
+    'thank-you-component': ThankyouPage,
+  },
+  data () {
+    return {
+      currentComponent: 'starter-questions-component',
+    }
+  },
+  methods: {
+    changeActiveComponent(componentName) {
+      this.currentComponent = componentName;
+    }
+  },
+  computed: {
+    getCurrentComponent: function() {
+      return {currentComponent:this.currentComponent};
+    }
   }
 }
 </script>
