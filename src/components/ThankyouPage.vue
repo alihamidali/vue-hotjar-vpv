@@ -5,10 +5,12 @@
 </template>
 
 <script>
+import triggerHotjarVPV from "../common";
+
 export default {
   name: "ThankyouPage",
   mounted() {
-    hj('vpv', 'finish');
+    triggerHotjarVPV('finish');
   }
 }
 </script>

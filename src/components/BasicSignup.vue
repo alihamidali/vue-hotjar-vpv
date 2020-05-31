@@ -6,6 +6,8 @@
 </template>
 
 <script>
+import triggerHotjarVPV from "../common";
+
 export default {
   name: "BasicSignup",
   methods: {
@@ -14,7 +16,7 @@ export default {
     }
   },
   mounted() {
-    hj('vpv', 'signup');
+    triggerHotjarVPV('signup');
   }
 }
 </script>

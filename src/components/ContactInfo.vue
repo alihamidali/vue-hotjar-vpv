@@ -6,6 +6,8 @@
 </template>
 
 <script>
+import triggerHotjarVPV from "../common";
+
 export default {
   name: "ContactInfo",
   methods: {
@@ -14,7 +16,7 @@ export default {
     }
   },
   mounted() {
-    hj('vpv', 'contact_info');
+    triggerHotjarVPV('contact_info');
   }
 }
 </script>

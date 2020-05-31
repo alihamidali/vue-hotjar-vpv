@@ -7,6 +7,8 @@
 </template>
 
 <script>
+import triggerHotjarVPV from "../common";
+
 export default {
   name: "FinalQuestions",
   methods: {
@@ -15,7 +17,7 @@ export default {
     }
   },
   mounted() {
-    hj('vpv', 'final_questions');
+    triggerHotjarVPV('final_questions');
   }
 }
 </script>
